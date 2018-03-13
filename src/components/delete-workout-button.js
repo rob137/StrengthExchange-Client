@@ -1,0 +1,1 @@
+<button>Delete this workout</button>

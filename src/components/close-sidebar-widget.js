@@ -1,0 +1,1 @@
+<a class="close-sidebar-widget vertical-center close-sidebar-widget vertical-center-1">></a>
