@@ -12,20 +12,49 @@ import ScreenShader from './screen-shader';
 import './app.css';
 
 export default function App() {
-  return (
-    <div>
+  const page = "EditWorkoutSidebar";
 
-      <LandingPage />
-      <Footer />
-{    /*
-
-      <Nav />
-      <Dashboard />
-      <ScreenShader />
-      <EditProgramSidebar />
-      <AddProgramSidebar /> 
-      <EditWorkoutSidebar />
-<Footer />*/}
-    </div>
+  if (page ==="LandingPage") {
+    return (
+      <div>
+        <LandingPage />
+        <Footer />
+      </div>
+    )
+  } else if (page ==="Dashboard") {
+    return (
+      <div>
+        <Nav />
+        <Dashboard />
+        <Footer />
+      </div>
+    )
+  } else if (page === "AddProgramSidebar") {
+    return (
+      <div>
+        <Nav />
+        <Dashboard />
+        <AddProgramSidebar />
+        <Footer />
+      </div>
+    )
+  } else if (page ==="EditProgramSidebar") {
+    return (
+      <div>
+        <Nav />
+        <Dashboard />
+        <EditProgramSidebar />
+        <Footer />
+      </div>
+    )
+  } else if (page === "EditWorkoutSidebar")
+    return (
+      <div>
+        <Nav />
+        <Dashboard />
+        <EditProgramSidebar />
+        <EditWorkoutSidebar />
+        <Footer />
+      </div>
   )
 };
