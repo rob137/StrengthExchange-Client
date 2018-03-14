@@ -1,18 +1,17 @@
 import React from 'react';
-import './signup-form.css';
 
 export default function SignupForm() {
 	return (
 		<form>
-			<label for="name">Name</label><br />
-			<input id="name" type="text" name="" /><br />
-			<label for="email">Email</label><br />
-			<input id="email" type="text" name="" /><br />
-			<label for="password">Password</label><br />
-			<input id="password" type="text" name="" /><br />
-			<label for="confirm-password">Confirm password</label><br />
-			<input id="confirm-password" type="text" name="" /><br /><br />
-			<input type="submit" name="sign up" className="submit-button" />
+			<label htmlFor="name">Name</label>
+			<input id="name" type="text" name="" />
+			<label htmlFor="email">Email</label>
+			<input id="email" type="text" name="" />
+			<label htmlFor="password">Password</label>
+			<input id="password" type="text" name="" />
+			<label htmlFor="confirm-password">Confirm password</label>
+			<input id="confirm-password" type="text" name="" />
+			<input type="submit" name="sign up" className="submit-cancel-button" />
 		</form>
 	)
 }

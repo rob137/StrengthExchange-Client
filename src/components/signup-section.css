@@ -2,8 +2,7 @@
 	text-align: center;
 	background-color: #6D6D6D;
 	min-height: 500px;
-  padding: 400px 40px 400px 40px;
-  padding-top: 50px;
+	padding-top: 50px;
 	padding-bottom: 50px;
 }
 
@@ -17,3 +16,33 @@
 	text-align: center;
 	padding-bottom: 20px;
 }
+
+.login-signup form label,
+.login-signup form input {
+	display: block;
+	position: relative;
+	text-align: left;
+	margin-left: 6px;
+}
+
+.login-signup form label {
+	padding-top: 10px;
+}
+
+.login-signup form input {
+	padding: 4px;
+}
+
+.login-signup form .submit-cancel-button {
+	display: inline-block;
+	width: 80px;
+	margin: 20px 5px 0 5px;
+	padding: 7px;
+	border-radius: 3px;
+	text-align: center;
+}
+
+.login {
+	position: relative; 
+	top: 90px;
+} 

@@ -15,18 +15,17 @@ export default function App() {
   return (
     <div>
 
-      {/* 
       <LandingPage />
       <Footer />
-      */}
+{    /*
 
       <Nav />
       <Dashboard />
       <ScreenShader />
       <EditProgramSidebar />
-      {/* <AddProgramSidebar /> */}
+      <AddProgramSidebar /> 
       <EditWorkoutSidebar />
-      <Footer />
+<Footer />*/}
     </div>
   )
 };
