@@ -1,0 +1,19 @@
+.login-signup {
+	text-align: center;
+	background-color: #6D6D6D;
+	min-height: 500px;
+  padding: 400px 40px 400px 40px;
+  padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.login-signup p {
+	text-align: center;
+	width: 50%;
+	font-size: 1.1em;
+	position: relative;
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 20px;
+}

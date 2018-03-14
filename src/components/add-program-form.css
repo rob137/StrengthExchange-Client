@@ -1,0 +1,11 @@
+.add-program-sidebar form {
+	padding-top: 40px;
+	width: 250px;
+	text-align: center;
+}
+
+.add-program-sidebar form label, 
+.add-program-sidebar input {
+	display: inline-block;
+	text-align: center;
+}

@@ -1,0 +1,24 @@
+.workouts ul {
+	display: flex;
+	justify-content: center; 
+	align-items: center; 
+  flex-wrap: wrap;
+	padding-top: 20px;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.workouts ul li {
+	width: 120px;
+	height: 120px;
+	margin: 10px;
+	border: 3px grey solid;
+	cursor: pointer;
+	background-color: white;
+}
+
+.workouts ul li span {
+	color: black;
+	display: block;
+}
+

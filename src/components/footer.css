@@ -1,0 +1,17 @@
+footer {
+	display: block;
+	height: 40px;
+	width: 100%;
+	background-color: grey;
+	text-align: center;
+}
+
+footer span {
+	font-weight: bold;
+	display: inline;
+	line-height: 0;
+	position: relative;
+	display: block;
+	top: 50%;
+	transform: translateY(-50%);
+}

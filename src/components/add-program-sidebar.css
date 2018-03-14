@@ -1,0 +1,15 @@
+  
+.add-program-sidebar {
+	padding-bottom: 30px;
+	position: fixed;
+	top: 80px;
+	background: #484848;
+	min-width: 60%;
+	max-width: 85%;
+	width: 1300px;
+	right: 0;
+	z-index: 5;
+	height: calc(100% - 80px);
+	overflow-y: scroll;
+	text-align: center;
+}

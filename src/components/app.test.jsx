@@ -10,6 +10,6 @@ describe('<App />', () => {
 
   it('Renders hello world <p> element', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.contains(<p>Hello world!</p>)).toEqual(true);
+    expect(wrapper.contains(<p>hellooo world!</p>)).toEqual(true);
   });
 });

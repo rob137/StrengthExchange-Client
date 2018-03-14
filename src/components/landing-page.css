@@ -1,0 +1,12 @@
+.landing-page-section {
+	position: relative;
+	width: 100%;
+	background: #323232;
+	text-align: center;
+	margin: 0 auto;
+	height: 230px;
+}
+
+.landing-page-section h1 {
+	font-size: 3em;
+}

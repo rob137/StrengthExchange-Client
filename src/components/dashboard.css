@@ -1,0 +1,20 @@
+.dashboard {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+
+.dashboard-header {
+	width: 100%;
+	background: #323232;
+	min-height: 180px;
+}
+
+.dashboard-header h2 {
+	position: relative;
+	font-size: 3em;
+	padding: 50px;
+	margin: 0px;
+}
