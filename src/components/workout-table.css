@@ -1,0 +1,44 @@
+.edit-individual-exercise form label {
+	display: block;
+	position: relative;
+	text-align: left;
+	padding-top: 10px;
+	margin-bottom: -16px;
+	margin-left: 6px;
+}
+
+.workout-table {
+	margin: 0 auto;
+}
+
+.workout-table input {
+	width: 95%;
+	margin: 2px;
+}
+
+.workout-table .comments-box {
+	height: 100px;
+	width: 100%;
+	margin-bottom: 20px;
+	overflow: scroll;
+}
+
+
+
+.edit-workout-sidebar form {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.edit-workout-sidebar form textarea {
+	resize: none;
+}
+
+/*edit-workout-sidebar.css*/
+.edit-workout-sidebar form .workout-summary {
+	min-width: 250px;
+	max-width: 600px;
+	width: 100%;
+	height: 200px;
+	overflow: scroll;
+}

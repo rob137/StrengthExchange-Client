@@ -1,10 +1,12 @@
+import React from 'react';
+import WorkoutTableInputs from './workout-table-inputs';
+import './workout-table.css';
 
-InputRows = [as many exercise/comments rows as there are exercises]
-		() => {
-			return <WorkoutTableInputs />
-		}
+export default function Table() {
+  return (
+		<table className="workout-table">
+			<WorkoutTableInputs />
+		</table> 
 
-<table class="workout-table">
-		<WorkoutTableHeadings />
-		<InputRows />
-	</table>
+	)
+}

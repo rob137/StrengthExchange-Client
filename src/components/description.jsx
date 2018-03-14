@@ -3,8 +3,8 @@ import './description.css';
 
 export default function Description() {
 	return (
-		<section class="description">
-			<p class="description-para vertical-center">
+		<section className="description">
+			<p className="description-para vertical-center">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

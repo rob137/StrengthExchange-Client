@@ -5,6 +5,7 @@ import Nav from './nav';
 import Dashboard from './dashboard';
 import AddProgramSidebar from './add-program-sidebar';
 import EditProgramSidebar from './edit-program-sidebar';
+import EditWorkoutSidebar from './edit-workout-sidebar';
 // Rendering of screenshader will depend on state
 import ScreenShader from './screen-shader';
 
@@ -24,6 +25,7 @@ export default function App() {
       <ScreenShader />
       <EditProgramSidebar />
       {/* <AddProgramSidebar /> */}
+      <EditWorkoutSidebar />
       <Footer />
     </div>
   )

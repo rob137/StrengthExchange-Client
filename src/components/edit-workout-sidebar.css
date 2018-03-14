@@ -1,0 +1,62 @@
+.edit-workout-sidebar {
+	padding-bottom: 30px;
+	position: fixed;
+	top: 80px;
+	background: #929292;
+	min-width: 50%;
+	max-width: 70%;
+	width: 1200px;
+	right: 0;
+	z-index: 5;
+	height: calc(100% - 80px);
+	overflow-y: scroll;
+	text-align: center;
+}
+
+.edit-workout {
+	background-color: #6D6D6D;
+	min-height: 500px;
+	padding: 400px 40px 400px 40px;
+}
+
+.edit-workout-sidebar form {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.edit-workout-sidebar form .workout-summary {
+	min-width: 250px;
+	max-width: 600px;
+	width: 100%;
+	height: 200px;
+	overflow: scroll;
+}
+
+.edit-individual-exercise form .workout-notes {
+	height: 150px;
+}
+
+.edit-exercise-form input {
+	width: 80px;
+}
+
+.edit-exercise-form .workout-notes {
+	width: 300px;
+	height: 300px;
+}
+
+.edit-exercise-form button, .edit-exercise-form .submit-button {
+	width: 120px;
+}  
+
+.edit-individual-exercise,
+.edit-workout {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;	
+	list-style: none;
+	background-color: #636363;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}

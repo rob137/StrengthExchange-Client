@@ -1,7 +1,18 @@
-<section class="edit-workout-sidebar">
-		<CloseSidebarWidget />
+import React from 'react';
+import CloseSidebarWidget from './close-sidebar-widget';
+import Header from './header';
+import EditWorkout from './edit-workout';
+import './edit-workout-sidebar.css';
 
-		// Note specific day/week will depend on user clicks
-		<Header text="Press Your Car {workoutClicked}" /> 
-		<EditWorkout />
-</section>
+export default function EditWorkoutSidebar() {
+	return (
+		<section className="edit-workout-sidebar">
+			<CloseSidebarWidget />
+			<Header 
+				text="Press Your Car [workout clicked by user]" 
+				className="sidebar-header"
+			/>
+			<EditWorkout />
+		</section>
+	)
+}

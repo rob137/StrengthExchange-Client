@@ -1,0 +1,34 @@
+.edit-program-sidebar ul {
+	display: flex;
+	justify-content: center; 
+	align-items: center; 
+  flex-wrap: wrap;
+	padding-top: 20px;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.edit-program-sidebar ul li {
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	border: 3px grey solid;
+	cursor: pointer;
+	background-color: white;
+}
+
+.edit-program-sidebar ul li span {
+	color: black;
+	display: block;
+}
+
+.edit-program-sidebar ul li .li-text {
+	position: relative;
+	top: 50%;
+
+}
+
+.edit-program-sidebar ul li img {
+	max-width: 90px;
+	max-height: 70px;
+}
