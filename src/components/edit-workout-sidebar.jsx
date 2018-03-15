@@ -7,7 +7,7 @@ import './edit-workout-sidebar.css';
 export default function EditWorkoutSidebar() {
 	return (
 		<section className="edit-workout-sidebar">
-			<CloseSidebarWidget />
+			<CloseSidebarWidget endpoint="/dashboard/edit-program/:programName"/>
 			<Header 
 				text="Press Your Car [workout clicked by user]" 
 				className="sidebar-header"

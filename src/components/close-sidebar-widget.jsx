@@ -7,11 +7,11 @@ export default function CloseSidebarWidget(props) {
   
   return (
     <Link to={endpoint}>
-      <p id="close-sidebar-widget" className="close-sidebar-widget 
+      <a id="close-sidebar-widget" className="close-sidebar-widget 
                     vertical-center"
       >
         > 
-      </p>
+      </a>
     </Link>
   )
 }

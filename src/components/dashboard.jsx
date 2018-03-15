@@ -1,5 +1,4 @@
 import React from 'react';
-import {BrowserRouter as Link} from 'react-router-dom';
 import ProgramsOverview from './programs-overview';
 import Header from './header';
 import './dashboard.css';

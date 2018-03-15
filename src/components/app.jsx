@@ -29,67 +29,14 @@ export default function App() {
         <Route exact path="/signup" component={LandingPage} />
         <Route path="/dashboard" component={Nav} />
         <Route path="/dashboard" component={Dashboard} />
-
         <Route path="/dashboard/:sidebar" component={ScreenShader} />
+
         <Route exact path="/dashboard/add-program" component={AddProgramSidebar} />
-        
-        
-        <Route exact path="/dashboard/add-program/:dayNumber/edit-workout" component={EditWorkoutSidebar} />
-        <Route exact path="/dashboard/edit-program/:programName" component={EditProgramSidebar} />
-        <Route exact path="/dashboard/edit-program/:programName/edit-workout/:dayNumber" component={EditWorkoutSidebar} />
-        <Footer />
+        {/* <Route exact path="/dashboard/add-program/:dayNumber/edit-workout" component={EditProgramSidebar} /> */}
+        <Route path="/dashboard/edit-program/:programName" component={EditProgramSidebar} />
+        <Route path="/dashboard/edit-program/:programName/edit-workout/:dayNum" component={EditWorkoutSidebar} />
+        <Footer />       
       </div>
     </Router>
   )
 };
-
-/* 
-const page = "AddProgramSidebar";
-
-  if (page ==="LandingPage") {
-    return (
-      <div>
-        <LandingPage />
-        <Footer />
-      </div>
-    )
-  } else if (page ==="Dashboard") {
-    return (
-      <div>
-        <Nav />
-        <Dashboard />
-        <Footer />
-      </div>
-    )
-  } else if (page === "AddProgramSidebar") {
-    return (
-      <div>
-        <Nav />
-        <Dashboard />
-        <ScreenShader />
-        <AddProgramSidebar />
-        <Footer />
-      </div>
-    )
-  } else if (page ==="EditProgramSidebar") {
-    return (
-      <div>
-        <Nav />
-        <Dashboard />
-        <ScreenShader />
-        <EditProgramSidebar />
-        <Footer />
-      </div>
-    )
-  } else if (page === "EditWorkoutSidebar")
-    return (
-      <div>
-        <Nav />
-        <Dashboard />
-        <ScreenShader />
-        <EditProgramSidebar />
-        <EditWorkoutSidebar />
-        <Footer />
-      </div>
-  )
-*/

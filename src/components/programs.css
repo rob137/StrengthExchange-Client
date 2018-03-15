@@ -17,7 +17,7 @@
 	background-color: white;
 }
 
-.programs ul li span {
+.program-link {
 	color: black;
 	display: block;
 }

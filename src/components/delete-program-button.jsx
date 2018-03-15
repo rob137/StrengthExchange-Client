@@ -1,9 +1,12 @@
 import React from 'react';
 import './delete-program-button.css';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 export default function DeleteProgramButton() {
   return (
-    <button className="delete-program-button">Delete this workout program</button> 
+    <Link to="/dashboard">
+      <button className="delete-program-button">Delete this workout program</button> 
+    </Link>
   )
 }
 
