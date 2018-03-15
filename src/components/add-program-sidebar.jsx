@@ -8,12 +8,12 @@ import RemoveWeekButton from './remove-week-button';
 import AddProgramForm from './add-program-form';
 import './add-program-sidebar.css';
 
-export default function AddProgramSidebar() {
-  return (
+export default function AddProgramSidebar(props) {
+	return (
 		<section className="add-program-sidebar">
-			<CloseSidebarWidget />
+			<CloseSidebarWidget endpoint="/dashboard" />
 			<Header 
-			className="sidebar-header"
+				className="sidebar-header"
 				text="Add Workout Program"
 			/>
 			<AddProgramForm />
@@ -24,4 +24,3 @@ export default function AddProgramSidebar() {
 		</section>
 	)
 }
-

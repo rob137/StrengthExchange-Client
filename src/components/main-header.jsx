@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default function MainHeader() {
 	return (
 		<section className="hero landing-page-section">

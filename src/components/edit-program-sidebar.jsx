@@ -11,7 +11,7 @@ import './edit-program-sidebar.css';
 export default function EditProgramSidebar() {
 	return (
 		<section className="edit-program-sidebar">
-			<CloseSidebarWidget />
+			<CloseSidebarWidget endpoint="/dashboard" />
 			<Header 
 				className="program-calendar-header
 									 sidebar-header" 

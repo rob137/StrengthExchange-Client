@@ -1,12 +1,17 @@
 import React from 'react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import './close-sidebar-widget.css';
 
-export default function CloseSidebarWidget() {
+export default function CloseSidebarWidget(props) {
+  const endpoint = props.endpoint;
+  
   return (
-    <a id="close-sidebar-widget" className="close-sidebar-widget 
-                  vertical-center"
-    >
-      > 
-    </a>
+    <Link to={endpoint}>
+      <p id="close-sidebar-widget" className="close-sidebar-widget 
+                    vertical-center"
+      >
+        > 
+      </p>
+    </Link>
   )
 }

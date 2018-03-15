@@ -5,9 +5,9 @@ import './programs-overview.css';
 
 export default function ProgramsOverview() {
   return (
-    <main className="programs">
+      <main className="programs">
       <AddProgramButton />
-      <Programs />
-    </main>
+        <Programs />
+      </main>
   )
 }
