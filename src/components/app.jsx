@@ -12,7 +12,7 @@ import ScreenShader from './screen-shader';
 import './app.css';
 
 export default function App() {
-  const page = "EditWorkoutSidebar";
+  const page = "AddProgramSidebar";
 
   if (page ==="LandingPage") {
     return (
@@ -34,6 +34,7 @@ export default function App() {
       <div>
         <Nav />
         <Dashboard />
+        <ScreenShader />
         <AddProgramSidebar />
         <Footer />
       </div>
@@ -43,6 +44,7 @@ export default function App() {
       <div>
         <Nav />
         <Dashboard />
+        <ScreenShader />
         <EditProgramSidebar />
         <Footer />
       </div>
@@ -52,6 +54,7 @@ export default function App() {
       <div>
         <Nav />
         <Dashboard />
+        <ScreenShader />
         <EditProgramSidebar />
         <EditWorkoutSidebar />
         <Footer />

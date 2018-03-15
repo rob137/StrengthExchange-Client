@@ -4,7 +4,7 @@ import './week.css';
 
 export default function Week() {
 	return (
-		<div>		
+		<div className="week">		
 			<h3 className="week-heading">Week N</h3>
 			<ul className="calendar-week">
 				<Day /> 

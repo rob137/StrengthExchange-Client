@@ -1,4 +1,4 @@
-.workouts ul {
+.programs ul {
 	display: flex;
 	justify-content: center; 
 	align-items: center; 
@@ -8,7 +8,7 @@
 	list-style-type: none;
 }
 
-.workouts ul li {
+.programs ul li {
 	width: 120px;
 	height: 120px;
 	margin: 10px;
@@ -17,7 +17,7 @@
 	background-color: white;
 }
 
-.workouts ul li span {
+.programs ul li span {
 	color: black;
 	display: block;
 }
