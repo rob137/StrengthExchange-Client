@@ -3,7 +3,7 @@ import ProgramsOverview from './programs-overview';
 import Header from './header';
 import './dashboard.css';
 
-export default function Dashboard(props) {
+export default function Dashboard() {
   return (
     <section className="dashboard">
       <Header 
@@ -12,5 +12,5 @@ export default function Dashboard(props) {
       />
       <ProgramsOverview />
     </section>
-  )  
+  )
 }

@@ -1,7 +1,15 @@
 import React from 'react';
 
-export default function CreateProgramButton() {
+export default function CreateProgramButton(props) {
   return (
-    <button className="create-program-button">Create</button>
+    <button 
+      className="create-program-button"
+      onClick={(e) => {
+        e.preventDefault();
+        props.addProgram();
+      }}
+    >
+      Create
+    </button>
   )
 }

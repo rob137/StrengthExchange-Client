@@ -1,13 +1,27 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 import AddProgramButton from './add-program-button';
 import Programs from './programs';
 import './programs-overview.css';
 
-export default function ProgramsOverview() {
-  return (
+export class ProgramsOverview extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  
+  render() {
+    return (
       <main className="programs">
-      <AddProgramButton />
-        <Programs />
+        <AddProgramButton />
+        <Programs programs={this.props.programs} />
       </main>
-  )
+    )
+  }
 }
+
+const mapStateToProps = state => ({
+  programs: state.programs
+});
+
+export default connect(mapStateToProps)(ProgramsOverview);
