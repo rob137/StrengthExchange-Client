@@ -33,8 +33,8 @@ export default function App() {
 
         <Route exact path="/dashboard/add-program" component={AddProgramSidebar} />
         {/* <Route exact path="/dashboard/add-program/:dayNumber/edit-workout" component={EditProgramSidebar} /> */}
-        <Route path="/dashboard/edit-program/:programName" component={EditProgramSidebar} />
-        <Route path="/dashboard/edit-program/:programName/edit-workout/:dayNum" component={EditWorkoutSidebar} />
+        <Route path="/dashboard/edit-program" component={EditProgramSidebar} />
+        <Route path="/dashboard/edit-program/edit-workout/:dayNum" component={EditWorkoutSidebar} />
         <Footer />       
       </div>
     </Router>

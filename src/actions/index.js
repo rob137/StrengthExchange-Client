@@ -1,5 +1,6 @@
 export const ADD_PROGRAM = 'ADD_PROGRAM';
-export const addProgram = name => ({
+export const addProgram = (name, summary) => ({
   type: ADD_PROGRAM,
-  name
+  name,
+  summary
 });

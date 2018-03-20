@@ -5,7 +5,7 @@ export default function ProgramNameInput(props) {
     <div>
       <label htmlFor="program-name">Program name</label>
       <input type="text" id="program-name" 
-        onChange={event => props.setText(event.target.value)}/>
+        onChange={event => props.setProgramName(event.target.value)}/>
       <br />
     </div>
   )

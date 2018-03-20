@@ -1,14 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 import CloseSidebarWidget from './close-sidebar-widget';
 import Header from './header';
-import DeleteProgramButton from './delete-program-button';
-import ProgramCalendar from './program-calendar';
-import AddWeekButton from './add-week-button';
-import RemoveWeekButton from './remove-week-button';
 import AddProgramForm from './add-program-form';
+
 import './add-program-sidebar.css';
 
-export default function AddProgramSidebar(props) {
+export function AddProgramSidebar(props) {
 	return (
 		<section className="add-program-sidebar">
 			<CloseSidebarWidget endpoint="/dashboard" />
@@ -17,10 +16,12 @@ export default function AddProgramSidebar(props) {
 				text="Add Workout Program"
 			/>
 			<AddProgramForm />
-			<DeleteProgramButton />
-			<ProgramCalendar />
-			<AddWeekButton />
-			<RemoveWeekButton />
 		</section>
 	)
 }
+
+const mapStateToProps = state => ({
+	programs: state.programs
+})
+
+export default connect(mapStateToProps)(AddProgramSidebar);

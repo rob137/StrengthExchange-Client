@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import ProgramNameInput from './program-name-input';
 import CreateProgramButton from './create-program-button';
 import CancelCreateProgramButton from './cancel-create-program-button';
+import ProgramSummaryInput from './program-summary-input';
 
 import { addProgram } from '../actions';
 
@@ -13,32 +14,37 @@ export class AddProgramForm extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state =  {
-			text: "test"
+			progNameInput: "",
+			progSummaryInput: ""
 		}
 	}
 
-	addProgram(name) {
-		this.props.dispatch(addProgram(name));
+	addProgram(name, summary) {
+		this.props.dispatch(addProgram(name, summary));
 	}
 
-	wipeInput() {
-		document.getElementById('program-name').value = '';
-	}
-
-	setText(text) {
+	setProgramName(text) {
 		this.setState({
-		  text
-		})
+			progNameInput: text
+		});
+	}
+
+	setProgramSummary(text) {
+		this.setState({
+			progSummaryInput: text
+		});
 	}
 
 	render() {
 		return (
 			<form className="horizontal-center">
-				<ProgramNameInput setText={this.setText.bind(this)}/>
-				<CreateProgramButton addProgram={() => {
-					this.addProgram(this.state.text);
-					this.wipeInput();
-				}}/>
+				<ProgramNameInput setProgramName={this.setProgramName.bind(this)}/>
+				<ProgramSummaryInput setProgramSummary={this.setProgramSummary.bind(this)}/>
+				<CreateProgramButton 
+					addProgram={() => {
+						this.addProgram(this.state.progNameInput, this.state.progSummaryInput);
+					}}
+				/>
 				<CancelCreateProgramButton />
 			</form>
 		)
