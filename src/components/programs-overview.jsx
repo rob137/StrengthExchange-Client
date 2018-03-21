@@ -6,9 +6,6 @@ import Programs from './programs';
 import './programs-overview.css';
 
 export class ProgramsOverview extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   
   render() {
     return (
