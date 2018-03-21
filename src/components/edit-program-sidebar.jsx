@@ -18,7 +18,7 @@ export function EditProgramSidebar(props) {
 			<Header 
 				className="program-calendar-header
 									 sidebar-header" 
-				text="Press Your Car" 
+				text={props.match.params.programId} 
 			/>
 			<ProgramStats />
 			<DeleteProgramButton />

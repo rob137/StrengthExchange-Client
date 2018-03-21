@@ -7,20 +7,19 @@ import Dashboard from './dashboard';
 import AddProgramSidebar from './add-program-sidebar';
 import EditProgramSidebar from './edit-program-sidebar';
 import EditWorkoutSidebar from './edit-workout-sidebar';
-// Rendering of screenshader will depend on state
 import ScreenShader from './screen-shader';
 
 import './app.css';
 
-export default function App() {
-  
+export default function App(props) {  
   let loggedIn = false;
+
   return (
     <Router>
       <div className="app">
         
         <Route exact path="/" render={() => (
-          loggedIn? (
+          loggedIn ? (
             <Redirect to="/dashboard" />
           ) : (
             <Redirect to="/signup" />
@@ -33,7 +32,7 @@ export default function App() {
 
         <Route exact path="/dashboard/add-program" component={AddProgramSidebar} />
         {/* <Route exact path="/dashboard/add-program/:dayNumber/edit-workout" component={EditProgramSidebar} /> */}
-        <Route path="/dashboard/edit-program" component={EditProgramSidebar} />
+        <Route path="/dashboard/:programId/edit-program" component={EditProgramSidebar} />
         <Route path="/dashboard/edit-program/edit-workout/:dayNum" component={EditWorkoutSidebar} />
         <Footer />       
       </div>

@@ -6,7 +6,6 @@ import Programs from './programs';
 import './programs-overview.css';
 
 export class ProgramsOverview extends React.Component {
-  
   render() {
     return (
       <main className="programs">

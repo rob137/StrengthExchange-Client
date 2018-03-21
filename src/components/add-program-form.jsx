@@ -49,6 +49,7 @@ export class AddProgramForm extends React.Component {
 					addProgram={() => {
 						this.postProgram(program, this.props.userId);
 					}}
+					programName={program.name}
 				/>
 				<CancelCreateProgramButton />
 			</form>
