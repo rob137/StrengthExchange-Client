@@ -1,10 +1,14 @@
 import * as actions from '../actions';
 
 const initialState = {
-  programs: []
+  programs: [],
+  userId: 'Dummy ID for development'
 };
 
 export const reducer = (state=initialState, action) => {
+  /* 
+  Redundant now Thunk is in place?
+
   if (action.type === actions.ADD_PROGRAM) {
     let name = action.name
         .replace(/\s+/g, ' ')
@@ -20,11 +24,17 @@ export const reducer = (state=initialState, action) => {
     	}); 
     }
   }
-  else if (action.type === actions.FETCH_PROGRAMS_SUCCESS) {
-    return action.programs
-  } 
+  else  */
+  if (action.type === actions.FETCH_PROGRAMS_SUCCESS) {
+    return Object.assign({}, state, {
+      programs: action.programs.programs
+    });
+  }
   else if (action.type === actions.POST_PROGRAM_SUCCESS) {
-    return action.program
+    return Object.assign({}, state, {
+      programs: [...state.programs, action.program],
+      userId: state.userId
+    })
   }
   return state;
 };

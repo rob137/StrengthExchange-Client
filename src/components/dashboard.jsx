@@ -12,8 +12,6 @@ export class Dashboard extends React.Component {
   componentDidMount() { // Use componentDidRender?  
     this.props.dispatch(fetchPrograms());
   }
-  
-
 
   render() {
     return (
@@ -28,8 +26,4 @@ export class Dashboard extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  programs: state.programs
-})
-
-export default connect(mapStateToProps)(Dashboard);
+export default connect()(Dashboard);

@@ -30,7 +30,7 @@ export const fetchPrograms = () => dispatch => {
   })
 }
 
-export const postProgram = (program) => dispatch => {
+export const postProgram = (program, userId) => dispatch => {
   fetch(`${API_BASE_URL}/programs`, {
     method: 'POST',
     headers: {
@@ -39,7 +39,8 @@ export const postProgram = (program) => dispatch => {
     },
     body: JSON.stringify({
       name: program.name,
-      summary: program.summary
+      summary: program.summary,
+      userId: userId // Using dummy userId for now
     })
   })
     .then(res => {

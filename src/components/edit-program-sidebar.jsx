@@ -12,7 +12,6 @@ import RemoveWeekButton from './remove-week-button';
 import './edit-program-sidebar.css';
 
 export function EditProgramSidebar(props) {
-	console.log(props.programs);
 	return (
 		<section className="edit-program-sidebar">
 			<CloseSidebarWidget endpoint="/dashboard" />
@@ -31,7 +30,8 @@ export function EditProgramSidebar(props) {
 }
 
 const mapStateToProps = state => ({
-	programs: state.programs
+	programs: state.programs,
+	userId: state.userId
 })
 
 export default connect(mapStateToProps)(EditProgramSidebar);

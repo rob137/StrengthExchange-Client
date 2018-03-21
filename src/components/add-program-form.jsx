@@ -19,8 +19,8 @@ export class AddProgramForm extends React.Component {
 		}
 	}
 
-	postProgram(program) {
-		this.props.dispatch(postProgram(program));
+	postProgram(program, userId) {
+		this.props.dispatch(postProgram(program, userId));
 	}
 
 	setProgramName(text) {
@@ -40,14 +40,14 @@ export class AddProgramForm extends React.Component {
 			name: this.state.progNameInput,
 			summary: this.state.progSummaryInput
 		}
-		
+
 		return (
 			<form className="horizontal-center">
 				<ProgramNameInput setProgramName={this.setProgramName.bind(this)}/>
 				<ProgramSummaryInput setProgramSummary={this.setProgramSummary.bind(this)}/>
 				<CreateProgramButton 
 					addProgram={() => {
-						this.postProgram(program);
+						this.postProgram(program, this.props.userId);
 					}}
 				/>
 				<CancelCreateProgramButton />
@@ -56,4 +56,8 @@ export class AddProgramForm extends React.Component {
 	}
 }
 
-export default connect()(AddProgramForm);
+const mapStateToProps = (state) => ({
+	userId: state.userId
+})
+
+export default connect(mapStateToProps)(AddProgramForm);
