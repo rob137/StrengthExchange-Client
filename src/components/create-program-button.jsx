@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './create-program-button.css';
 
 export default function CreateProgramButton(props) {
-  console.log(props.programName);
+  
   const editProgramEndpoint = `${props.programName}/edit-program`;
   return (
       <Link 
