@@ -7,9 +7,11 @@ export default function Week(props) {
 	let daysHtml = [];
 	if (props.weekArr) {
 		weekNum = props.weekArr[0].week;
-		daysHtml = props.weekArr.map((dayObj, index) => {
-			return <Day key={index} dayNum={Math.ceil(dayObj.dayNum/7)}/>
-		})
+		daysHtml = props.weekArr
+			.sort((a, b) => a.day > b.day)
+			.map((dayObj, index) => {
+				return <Day key={index} dayNum={dayObj.day%7}/>
+			})
 	}
 	
 	return (
