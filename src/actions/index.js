@@ -7,6 +7,12 @@ export const addProgram = (name, summary) => ({
   summary
 });
 
+export const ERASE_CALENDAR = 'ERASE_CALENDAR';
+export const eraseCalendar = () => ({
+  type: ERASE_CALENDAR,
+  calendar: []
+});
+
 export const FETCH_PROGRAMS_SUCCESS = 'FETCH_PROGRAMS_SUCCESS';
 export const fetchProgramsSuccess = programs => ({
   type: FETCH_PROGRAMS_SUCCESS,

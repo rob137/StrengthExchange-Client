@@ -9,14 +9,14 @@ import ProgramCalendar from './program-calendar';
 import AddWeekButton from './add-week-button';
 import RemoveWeekButton from './remove-week-button';
 
-import { fetchCalendar } from '../actions';
+import { fetchCalendar, eraseCalendar } from '../actions';
 
 import './edit-program-sidebar.css';
 
 export class EditProgramSidebar extends React.Component {
 	componentDidMount() { 
 		const targetProgram = this.props.programs.find(a => {
-			return a.name === this.props.match.params.programTitle
+			return a.name === this.props.match.params.programTitle;
 		});
 		this.props.dispatch(fetchCalendar(targetProgram.id));
 	}
@@ -24,7 +24,10 @@ export class EditProgramSidebar extends React.Component {
 	render() {
 		return (
 			<section className="edit-program-sidebar">
-				<CloseSidebarWidget endpoint="/dashboard" />
+				<CloseSidebarWidget 
+					endpoint="/dashboard" 
+					clickEvent={() => this.props.dispatch(eraseCalendar())}
+				/>
 				<Header 
 					className="program-calendar-header
 										 sidebar-header" 
