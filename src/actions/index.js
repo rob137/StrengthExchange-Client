@@ -31,6 +31,11 @@ export const postProgramSuccess = program => ({
   program
 })
 
+export const DELETE_PROGRAM_SUCCESS = 'DELETE_PROGRAM_SUCCESS';
+export const deleteProgramSuccess = () => ({
+  type: DELETE_PROGRAM_SUCCESS,
+})
+
 export const fetchPrograms = () => dispatch => {
   fetch(`${API_BASE_URL}/programs`)
     .then(res => {
@@ -58,7 +63,6 @@ export const fetchCalendar = (programId) => dispatch => {
     });
 }
 
-
 export const postProgram = (program, userId) => dispatch => {
   fetch(`${API_BASE_URL}/programs`, {
     method: 'POST',
@@ -81,4 +85,21 @@ export const postProgram = (program, userId) => dispatch => {
     .then(program=> {
       dispatch(postProgramSuccess(program));
     })
+}
+
+export const deleteProgram = (programId) => dispatch => {
+  fetch(`${API_BASE_URL}/programs/${programId}`, {
+    method: 'DELETE',
+  })
+  .then(res=> {
+    if (!res.ok) {
+      return Promise.reject(res.statusText);
+    }
+  })
+  .then(() => {
+    dispatch(deleteProgramSuccess(programId));
+  })
+  .catch((err) => {
+    console.log(err);
+  })
 }
