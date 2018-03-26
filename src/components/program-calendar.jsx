@@ -34,16 +34,15 @@ export function ProgramCalendar(props) {
 		calendarWithWeeks = createCalendarWithWeeks(props.calendar.days);
 	}
 	
-	if (calendarWithWeeks.length > 0) {
-		console.log(calendarWithWeeks);
-	};
+	const weeks = calendarWithWeeks.map((weekArr, index) => {
+		return <Week key={index} weekArr={weekArr} />
+	});
 
 
+	
 	return (
 		<div className="program-calendar">
-			<Week /> 
-			<Week />
-			<Week />
+			{weeks}
 		</div>
 	)
 }
