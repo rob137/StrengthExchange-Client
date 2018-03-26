@@ -14,17 +14,14 @@ import { fetchCalendar } from '../actions';
 import './edit-program-sidebar.css';
 
 export class EditProgramSidebar extends React.Component {
-
-	componentDidMount() {  
-		const programId = '5aaf72ca086bbd0004bea321'
-		this.props.dispatch(fetchCalendar(programId));
+	componentDidMount() { 
+		const targetProgram = this.props.programs.find(a => {
+			return a.name === this.props.match.params.programTitle
+		});
+		this.props.dispatch(fetchCalendar(targetProgram.id));
 	}
 
 	render() {
-		const programForEditing = this.props.programs.find(a => {
-			return a.name === this.props.match.params.programTitle
-		});
-		
 		return (
 			<section className="edit-program-sidebar">
 				<CloseSidebarWidget endpoint="/dashboard" />
