@@ -32,7 +32,7 @@ export default function App(props) {
 
         <Route exact path="/dashboard/add-program" component={AddProgramSidebar} />
         {/* <Route exact path="/dashboard/add-program/:dayNumber/edit-workout" component={EditProgramSidebar} /> */}
-        <Route path="/dashboard/:programId/edit-program" component={EditProgramSidebar} />
+        <Route path="/dashboard/:programTitle/edit-program" component={EditProgramSidebar} />
         <Route path="/dashboard/edit-program/edit-workout/:dayNum" component={EditWorkoutSidebar} />
         <Footer />       
       </div>

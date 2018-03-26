@@ -9,28 +9,43 @@ import ProgramCalendar from './program-calendar';
 import AddWeekButton from './add-week-button';
 import RemoveWeekButton from './remove-week-button';
 
+import { fetchCalendar } from '../actions';
+
 import './edit-program-sidebar.css';
 
-export function EditProgramSidebar(props) {
-	return (
-		<section className="edit-program-sidebar">
-			<CloseSidebarWidget endpoint="/dashboard" />
-			<Header 
-				className="program-calendar-header
-									 sidebar-header" 
-				text={props.match.params.programId} 
-			/>
-			<ProgramStats />
-			<DeleteProgramButton />
-			<ProgramCalendar />
-			<AddWeekButton />
-			<RemoveWeekButton />
-		</section>
-	)
+export class EditProgramSidebar extends React.Component {
+
+	componentDidMount() {  
+		const programId = '5aaf72ca086bbd0004bea321'
+		this.props.dispatch(fetchCalendar(programId));
+	}
+
+	render() {
+		const programForEditing = this.props.programs.find(a => {
+			return a.name === this.props.match.params.programTitle
+		});
+		
+		return (
+			<section className="edit-program-sidebar">
+				<CloseSidebarWidget endpoint="/dashboard" />
+				<Header 
+					className="program-calendar-header
+										 sidebar-header" 
+					text={this.props.match.params.programTitle} 
+				/>
+				<ProgramStats />
+				<DeleteProgramButton />
+				<ProgramCalendar />
+				<AddWeekButton />
+				<RemoveWeekButton />
+			</section>
+		)
+	}
 }
 
 const mapStateToProps = state => ({
 	programs: state.programs,
+	calendar: state.calendar,
 	userId: state.userId
 })
 

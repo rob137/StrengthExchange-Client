@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import './day.css';
 
 export default function Day() {
-	const programId = "dummyIdForNow";
-	const editProgramEndpoint = `${programId}/edit-program`;
+	const programTitle = "dummyTitleForNow";
+	const editProgramEndpoint = `${programTitle}/edit-program`;
 	return (
 		<Link to={editProgramEndpoint}>
 			<li className="day">	

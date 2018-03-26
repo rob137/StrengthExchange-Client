@@ -13,6 +13,12 @@ export const fetchProgramsSuccess = programs => ({
   programs
 })
 
+export const FETCH_CALENDAR_SUCCESS = 'FETCH_CALENDAR_SUCCESS';
+export const fetchCalendarSuccess = calendar => ({
+  type: FETCH_CALENDAR_SUCCESS,
+  calendar
+})
+
 export const POST_PROGRAM_SUCCESS = 'POST_PROGRAM_SUCCESS';
 export const postProgramSuccess = program => ({
   type: POST_PROGRAM_SUCCESS,
@@ -20,15 +26,32 @@ export const postProgramSuccess = program => ({
 })
 
 export const fetchPrograms = () => dispatch => {
-  fetch(`${API_BASE_URL}/programs`).then(res => {
-    if(!res.ok) {
-      return Promise.reject(res.statusText);
-    }
-    return res.json();
-  }).then(programs => {
-    dispatch(fetchProgramsSuccess(programs));
-  })
+  fetch(`${API_BASE_URL}/programs`)
+    .then(res => {
+      if(!res.ok) {
+        return Promise.reject(res.statusText);
+      }
+      return res.json();
+    })
+    .then(programs => {
+      dispatch(fetchProgramsSuccess(programs));
+    });
 }
+
+// Fetches workout calendar for a specific workout program
+export const fetchCalendar = (programId) => dispatch => {
+  fetch(`${API_BASE_URL}/days/program/${programId}`)
+    .then(res => {
+      if (!res.ok) {
+        return Promise.reject(res.statusText);
+      }
+      return res.json();
+    })
+    .then(calendar => {
+      dispatch(fetchCalendarSuccess(calendar))
+    });
+}
+
 
 export const postProgram = (program, userId) => dispatch => {
   fetch(`${API_BASE_URL}/programs`, {
