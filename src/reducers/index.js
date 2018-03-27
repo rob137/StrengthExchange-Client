@@ -23,11 +23,6 @@ export const reducer = (state=initialState, action) => {
       userId: state.userId
     })
   }
-  else if (action.type === actions.ERASE_CALENDAR) {
-    return Object.assign({}, state, {
-      calendar: action.calendar
-    })
-  }
   return state;
 };
 
