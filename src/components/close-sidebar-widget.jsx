@@ -7,7 +7,6 @@ export default function CloseSidebarWidget(props) {
   return (
     <Link to={endpoint} 
       id="close-sidebar-widget" 
-      onClick={() => props.clickEvent()}
       className="close-sidebar-widget vertical-center">
       >
     </Link>
