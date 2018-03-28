@@ -15,9 +15,9 @@ export default function SignupForm() {
 			<label htmlFor="email">Email</label>
 			<input id="email" type="text" required name="" />
 			<label htmlFor="password">Password</label>
-			<input id="password" type="text" required name="" />
+			<input id="password" type="password" required name="" />
 			<label htmlFor="confirm-password">Confirm password</label>
-			<input id="confirm-password" type="text" required name="" />
+			<input id="confirm-password" type="password" required name="" />
 			<input 
 				type="submit" 
 				name="sign up" 
