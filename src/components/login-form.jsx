@@ -43,13 +43,13 @@ export class SignupForm extends React.Component {
 						validate={[required, nonEmpty]}
 					/>
 					<button 
-						className="submit-cancel-button" 
+						className="submit-login-button" 
 						disabled={this.props.pristine || this.props.submitting}
 					> 
 						Log in
 					</button>
-					<button className="submit-cancel-button">Back</button>
 				</form>
+				<button className="submit-cancel-button">Back</button>
 			</section>
 		);
 	}
