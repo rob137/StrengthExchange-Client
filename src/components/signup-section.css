@@ -33,13 +33,21 @@
 	padding: 4px;
 }
 
-.login-signup form .submit-cancel-button {
-	display: inline-block;
+.submit-cancel-button, .submit-login-button {
 	width: 80px;
 	margin: 20px 5px 0 5px;
 	padding: 7px;
 	border-radius: 3px;
-	text-align: center;
+}
+
+.submit-login-button {
+	margin-left: 10px;
+	float: left;
+}
+
+.submit-cancel-button {
+	float: right;
+	margin-top: -34px;
 }
 
 .login {
