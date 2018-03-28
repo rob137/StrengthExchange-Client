@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class Input extends React.Component {
   componentDidUpdate(prevProps) {
-    if (!preveProps.meta.active && this.props.meta.active) {
+    if (!prevProps.meta.active && this.props.meta.active) {
       this.input.focus();
     }
   }
