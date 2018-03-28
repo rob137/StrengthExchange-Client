@@ -41,7 +41,7 @@ export class SignupForm extends React.Component {
 						component={Input}
 						id="password" 
 						name="password"
-						type="text"
+						type="password"
 						validate={[required, nonEmpty]}
 					/>
 					<button 
