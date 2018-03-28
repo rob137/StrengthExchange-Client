@@ -7,7 +7,10 @@ export default function DeleteProgramButton(props) {
     <Link to="/dashboard">
       <button 
         className="delete-program-button"
-        onClick={() => props.deleteProgram()}
+        onClick={() => { 
+          props.deleteProgram();
+          props.refreshDashboard();
+        }}
       >
         Delete this workout program
       </button> 

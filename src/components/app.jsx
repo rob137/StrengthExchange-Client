@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+
 import LandingPage from './landing-page';
 import Footer from './footer'; 
 import Nav from './nav';
@@ -8,6 +9,8 @@ import AddProgramSidebar from './add-program-sidebar';
 import EditProgramSidebar from './edit-program-sidebar';
 import EditWorkoutSidebar from './edit-workout-sidebar';
 import ScreenShader from './screen-shader';
+
+import { fetchPrograms } from '../actions';
 
 import './app.css';
 
@@ -32,7 +35,7 @@ export default function App(props) {
 
         <Route exact path="/dashboard/add-program" component={AddProgramSidebar} />
         {/* <Route exact path="/dashboard/add-program/:dayNumber/edit-workout" component={EditProgramSidebar} /> */}
-        <Route path="/dashboard/:programTitle/edit-program" component={EditProgramSidebar} />
+        <Route path="/dashboard/:programTitle/edit-program" component={EditProgramSidebar} refreshDashboard={() => this.props.dispatch(fetchPrograms())} />
         <Route path="/dashboard/:programTitle/edit-program/edit-workout/:dayNum" component={EditWorkoutSidebar} />
         <Footer />       
       </div>
