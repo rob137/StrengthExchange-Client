@@ -1,8 +1,10 @@
 import React from 'react';
 import { Field, reduxForm, focus } from 'redux-form';
-import Input from './input';
 import { login } from '../actions/auth';
 import { required, nonEmpty } from '../validators';
+import { Link } from 'react-router-dom'
+
+import Input from './input';
 
 export class SignupForm extends React.Component {
 	onSubmit(values) {
@@ -49,7 +51,7 @@ export class SignupForm extends React.Component {
 						Log in
 					</button>
 				</form>
-				<button className="submit-cancel-button">Back</button>
+				<Link to=""><button className="submit-cancel-button">Back</button></Link>
 			</section>
 		);
 	}

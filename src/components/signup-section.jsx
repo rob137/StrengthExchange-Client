@@ -1,26 +1,20 @@
 import React from 'react';
-import SignupText from './signup-text';
-import SignupForm from './signup-form';
-import LoginForm from './login-form';
+import { BrowserRouter as Router, Route, Redirect, withRouter } from 'react-router-dom';
+
+import Signup from './signup';
+import Login from './login';
+
 import './signup-section.css';
 
-export default function SignupSection() {
-	let showLogin = false;
-	if (showLogin) {
+export default class SignupSection extends React.Component {
+	render() {
 		return (
-			<section className="login-signup">
-				<div className="form-wrapper horizontal-center">
-					<LoginForm />
+			<Router>
+				<div className="login-signup-container">
+					<Route exact path="/" component={Signup} />
+					<Route exact path="/login" component={Login} />
 				</div>
-			</section>
+			</Router>
 		)
-	} 
-	return (
-		<section className="login-signup">
-			<SignupText />
-			<div className="form-wrapper horizontal-center">
-				<SignupForm />
-			</div>
-		</section>
-	)	
+	}
 }
