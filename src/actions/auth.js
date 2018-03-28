@@ -33,6 +33,8 @@ export const authError = error => ({
   error
 });
 
+// Store auth token in state and localStorage; decode/store 
+// user data stored in the token
 const storeAuthInfo = (authToken, dispatch) => {
   const decodedToken = jwtDecode(authToken);
   dispatch(setAuthToken(authToken));
@@ -53,6 +55,7 @@ export const login = (email, password) => dispatch => {
         password
       })
     })
+      // reject any non-200 status code responses
       .then(res => normalizeResponseErrors(res))
       .then(res => res.json())
       .then(({authToken}) => storeAuthInfo(authToken, dispatch))
@@ -63,6 +66,7 @@ export const login = (email, password) => dispatch => {
             ? 'Incorrect email or password'
             : 'Unable to login, please try again';
           dispatch(authError(err));
+          // return SubmissionError for Redux Form
           return Promise.reject(
             new SubmissionError({
               _error: message
@@ -78,6 +82,7 @@ export const refreshAuthToken = () => (dispatch, getState) => {
   return fetch(`${API_BASE_URL}/auth/refresh`, {
     method: 'POST',
     headers: {
+      // Use current token as credentials to get a new token
       Authorization: `Bearer ${authToken}`
     }
   })
@@ -85,6 +90,8 @@ export const refreshAuthToken = () => (dispatch, getState) => {
     .then(res => res.json())
     .then(({ authToken }) => storeAuthInfo(authToken, dispatch))
     .catch(err => {
+      // For when current creds used to request refresh token 
+      // are invalid/expired - clear them and sign us out
       dispatch(authError(err));
       dispatch(clearAuth());
       clearAuthToken(authToken);
