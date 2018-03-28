@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function SignupText() {
   return (
     <div>
       <h2>Sign Up</h2>
       <p>
-        Already registered? Click <a href="blank">here</a> to sign in
+        Already registered? Click <Link to="/login">here</Link> to sign in
       </p>
     </div>
   )
