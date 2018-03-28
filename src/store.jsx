@@ -12,7 +12,7 @@ const store = createStore(
     form: formReducer,
     auth: authReducer,
     protectedData: protectedDataReducer,
-    reducer,
+    reducer // these reducers need breaking up to match the above format
   }), 
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   applyMiddleware(thunk)
@@ -26,4 +26,4 @@ if (authToken) {
   store.dispatch(refreshAuthToken());
 }
 
-export default store
+export default store;
