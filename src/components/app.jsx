@@ -44,19 +44,11 @@ export class App extends React.Component {
   }
   
   render() {
-    let loggedIn = false;
     return (
       <Router>
         <div className="app">
 
-          <Route exact path="/" render={() => (
-            loggedIn ? (
-              <Redirect to="/dashboard" />
-            ) : (
-                <Redirect to="/signup" />
-              )
-          )} />
-          <Route exact path="/signup" component={LandingPage} />
+          <Route exact path="/" component={LandingPage} />
           <Route path="/dashboard" component={Nav} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/dashboard/:sidebar" component={ScreenShader} />
