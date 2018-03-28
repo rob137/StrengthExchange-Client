@@ -1,10 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { Link, Redirect } from 'react-router-dom';
+
 import MainHeader from './main-header';
 import Description from './description';
 import SignupSection from './signup-section';
+
 import './landing-page.css';
 
-export default function LandingPage() {
+export function LandingPage(props) {
+  if (props.loggedIn) {
+    return <Redirect to="/dashboard" />;
+  }
   return (
     <section>
       <MainHeader />
@@ -13,3 +20,9 @@ export default function LandingPage() {
     </section>   
   )
 }
+
+const mapStateToProps = state => ({
+  loggedIn: state.auth.currentUser !== null
+})
+
+export default connect(mapStateToProps)(LandingPage);
