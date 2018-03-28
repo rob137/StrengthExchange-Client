@@ -21,23 +21,51 @@ export class SignupForm extends React.Component {
 		return (
 			<form
 				className="signup-form"
-				onSubmit={this.props.handleSubmit(values => this.onSubmit(values)
-				)}>
-				<label htmlFor="first-name">First Name</label>
-				<input id="first-name" type="text" required name="" />
-				<label htmlFor="first-name">Last Name</label>
-				<input id="first-name" type="text" required name="" />
+				onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
+			>
+				<label htmlFor="firstName">First Name</label>
+				<Field 
+					component={Input} 
+					type="text" 
+					name="firstName"
+					validate={[required, nonEmpty, isTrimmed]}
+				/>
+				<label htmlFor="lastName">Last Name</label>
+				<Field 
+					component={Input} 
+					type="text" 
+					name="lastName" 
+					validate={[required, nonEmpty, isTrimmed]}
+				/>
 				<label htmlFor="email">Email</label>
-				<input id="email" type="text" required name="" />
+				<Field 
+					component={Input} 
+					type="text" 
+					name="email" 
+					validate={[required, nonEmpty, isTrimmed]}
+				/>
 				<label htmlFor="password">Password</label>
-				<input id="password" type="password" required name="" />
-				<label htmlFor="confirm-password">Confirm password</label>
-				<input id="confirm-password" type="password" required name="" />
-				<input
+				<Field 
+					component={Input} 
+					type="password" 
+					name="password" 
+					validate={[required, passwordLength, isTrimmed]}
+				/>
+				<label htmlFor="passwordConfirm">Confirm password</label>
+				<Field 
+					component={Input} 
+					type="password" 
+					name="passwordConfirm" 
+					validate={[required, nonEmpty, matchesPassword]}
+				/>
+				<button
 					type="submit"
 					name="sign up"
 					className="submit-cancel-button"
-				/>
+					disabled={this.props.pristine || this.props.submitting}
+				>
+					Register
+				</button>
 			</form>
 		)
 	}
