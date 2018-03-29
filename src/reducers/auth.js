@@ -28,7 +28,7 @@ export default function reducer(state = initialState, action) {
       loading: true,
       error: null,
     });
-  } else if (action.type === Auth_SUCCESS) {
+  } else if (action.type === AUTH_SUCCESS) {
     return Object.assign({}, state, {
       loading: false,
       currentUser: action.currentUser,
