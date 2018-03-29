@@ -20,14 +20,19 @@ export default function reducer(state = initialState, action) {
     });
   } else if (action.type === CLEAR_AUTH) {
     return Object.assign({}, state, {
-      loading: true,
-      error: null,
+      authToken: null,
+      currentUser: null,
     });
   } else if (action.type === AUTH_REQUEST) {
     return Object.assign({}, state, {
+      loading: true,
+      error: null,
+    });
+  } else if (action.type === Auth_SUCCESS) {
+    return Object.assign({}, state, {
       loading: false,
       currentUser: action.currentUser,
-    });
+    })
   } else if (action.type === AUTH_ERROR) {
     return Object.assign({}, state, {
       loading: false,
