@@ -25,8 +25,9 @@ export class SignupForm extends React.Component {
 				<h2 className="login-heading">Log In</h2>
 				<form
 					className="login-form"
-					onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
-				>
+					onSubmit={this.props.handleSubmit(values =>
+						this.onSubmit(values)
+					)}>
 					{error}
 					<label htmlFor="email">Email</label>
 					<Field 
@@ -57,7 +58,8 @@ export class SignupForm extends React.Component {
 	}
 }
 
+
 export default reduxForm({
 	form: 'login',
 	onSubmitFail: (errors, dispatch) => dispatch(focus('login', 'email'))
-})(SignupForm)
+})(SignupForm);
